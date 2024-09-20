@@ -1,0 +1,100 @@
+/* Estilo general para el cuerpo */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Fuente de 8 bits */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* El contenedor de los mensajes */
+#message {
+    font-size: 20px;
+    margin-bottom: 20px;
+    white-space: pre-line;
+    line-height: 1.8; /* Aumenta la separación entre las líneas */
+}
+
+/* Contenedor de opciones (excepto salir) */
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre las opciones */
+}
+
+/* Estilos para los botones, que serán solo texto */
+button {
+    background: none;
+    border: none;
+    color: #00FF00; /* Texto en verde */
+    font-family: inherit;  /* Mantiene el estilo de 8 bits */
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Estilo para los botones cuando el ratón pasa sobre ellos */
+button:hover {
+    color: #00CC00; /* Un verde más oscuro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Elimina los bordes y contorno cuando se selecciona el botón */
+button:focus {
+    outline: none;
+}
+
+/* Contenedor para el botón de salir, que estará abajo del todo */
+#exit {
+    margin-top: auto; /* Mueve el botón de salir al final */
+    font-size: 18px;
+    margin-bottom: 20px; /* Añade margen inferior */
+}
+
+/* --- Media Queries para hacer el diseño responsive --- */
+
+/* Para pantallas de tablets (entre 600px y 1024px) */
+@media (max-width: 1024px) {
+    #message {
+        font-size: 18px; /* Reducimos ligeramente el tamaño del texto */
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 16px; /* Reducimos el tamaño del texto de los botones */
+    }
+
+    h1 {
+        font-size: 22px; /* Ajuste de tamaño del título */
+    }
+}
+
+/* Para pantallas de móviles (600px o menos) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Añadimos un poco de padding en móviles */
+    }
+
+    #message {
+        font-size: 16px; /* Reducimos más el tamaño del texto */
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 14px; /* Reducimos aún más el tamaño del texto en los botones */
+    }
+
+    h1 {
+        font-size: 18px; /* Ajuste de tamaño del título */
+    }
+
+    #exit {
+        font-size: 16px; /* Ajuste del tamaño del botón de salir */
+    }
+}

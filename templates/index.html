@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La habitación</title>
+    <!-- Enlace a la fuente de Google Fonts para el estilo 8 bits -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Archivo JavaScript -->
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+    <h1>La habitación</h1>
+    <div id="message"></div>
+    <div id="options"></div>
+    <div id="exit"></div> <!-- Contenedor para el botón de salir -->
+</body>
+</html>
+
